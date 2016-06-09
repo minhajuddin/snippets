@@ -1,0 +1,13 @@
+snippet cont
+	defmodule $2.${1:`substitute(vim_snippets#Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} do
+		use $2.Web, :controller
+		${0}
+	end
+endsnippet
+
+snippet action
+	def $1(conn, _params) do
+		conn
+		|> render(:$1)
+	end
+endsnippet
